@@ -21,13 +21,21 @@ namespace Monkey_Bash
         }
 
         /// <summary>
-        /// This method starts the timer with the normal monkey set in the 
+        /// This method starts the timers with the normal monkey set in the 
         /// picture box and sets the text of the labels.
         /// </summary>
         private void startTimer(object sender, EventArgs e)
         {
-            monkeyPictureBox.Image = Image.FromFile("Monkey.jpg");
+            monkeyOnePictureBox.Image = Image.FromFile("Monkey.jpg");
+            monkeyTwoPictureBox.Image = Image.FromFile("Monkey.jpg");
+            monkeyThreePictureBox.Image = Image.FromFile("Monkey.jpg");
+            monkeyFourPictureBox.Image = Image.FromFile("Monkey.jpg");
+            monkeyFivePictureBox.Image = Image.FromFile("Monkey.jpg");
             timer1.Enabled = true;
+            timer2.Enabled = true;
+            timer3.Enabled = true;
+            timer4.Enabled = true;
+            timer5.Enabled = true;
             monkeyHitLabel.Text = Convert.ToString(hitMonkey);
             monkeyMissedLabel.Text = Convert.ToString(missedMonkey);
         }
@@ -40,19 +48,95 @@ namespace Monkey_Bash
         private void stopTimer(object sender, EventArgs e)
         {
             timer1.Enabled = false;
+            timer2.Enabled = false;
+            timer3.Enabled = false;
+            timer4.Enabled = false;
+            timer5.Enabled = false;
         }
 
         /// <summary>
-        /// This method adds one to the hit monkey score and then 
-        /// changes the monkey to an angry one and brings up a message
-        /// box saying you have hit him.
+        /// The next 5 methods adds one to the hit monkey score and then 
+        /// changes all of the monkeys to an angry one and brings up a message
+        /// box saying you have hit one of them.
         /// </summary>
-        private void monkeyCaught(object sender, EventArgs e)
+        private void monkeyOneCaught(object sender, EventArgs e)
         {
             hitMonkey++;
             timer1.Enabled = false;
-            MessageBox.Show("Ouch! You HIT Me!");
-            monkeyPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            timer2.Enabled = false;
+            timer3.Enabled = false;
+            timer4.Enabled = false;
+            timer5.Enabled = false;
+            MessageBox.Show("HEY! You HIT One of us!");
+            monkeyOnePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyTwoPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyThreePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFourPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFivePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+        }
+
+        private void monkeyTwoCaught(object sender, EventArgs e)
+        {
+            hitMonkey++;
+            timer1.Enabled = false;
+            timer2.Enabled = false;
+            timer3.Enabled = false;
+            timer4.Enabled = false;
+            timer5.Enabled = false;
+            MessageBox.Show("HEY! You HIT One of us!");
+            monkeyOnePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyTwoPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyThreePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFourPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFivePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+        }
+
+        private void monkeyThreeCaught(object sender, EventArgs e)
+        {
+            hitMonkey++;
+            timer1.Enabled = false;
+            timer2.Enabled = false;
+            timer3.Enabled = false;
+            timer4.Enabled = false;
+            timer5.Enabled = false;
+            MessageBox.Show("HEY! You HIT One of us!");
+            monkeyOnePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyTwoPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyThreePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFourPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFivePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+        }
+
+        private void monkeyFourCaught(object sender, EventArgs e)
+        {
+            hitMonkey++;
+            timer1.Enabled = false;
+            timer2.Enabled = false;
+            timer3.Enabled = false;
+            timer4.Enabled = false;
+            timer5.Enabled = false;
+            MessageBox.Show("HEY! You HIT One of us!");
+            monkeyOnePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyTwoPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyThreePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFourPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFivePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+        }
+
+        private void monkeyFiveCaught(object sender, EventArgs e)
+        {
+            hitMonkey++;
+            timer1.Enabled = false;
+            timer2.Enabled = false;
+            timer3.Enabled = false;
+            timer4.Enabled = false;
+            timer5.Enabled = false;
+            MessageBox.Show("HEY! You HIT One of us!");
+            monkeyOnePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyTwoPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyThreePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFourPictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
+            monkeyFivePictureBox.Image = Image.FromFile("Angry_Monkey.jpg");
         }
 
         /// <summary>
@@ -64,21 +148,64 @@ namespace Monkey_Bash
         {
             missedMonkey++;
             timer1.Enabled = false;
+            timer2.Enabled = false;
+            timer3.Enabled = false;
+            timer4.Enabled = false;
+            timer5.Enabled = false;
             MessageBox.Show("You MISSED!");
-            monkeyPictureBox.Image = Image.FromFile("Happy_Monkey.jpg");
-
+            monkeyOnePictureBox.Image = Image.FromFile("Happy_Monkey.jpg");
+            monkeyTwoPictureBox.Image = Image.FromFile("Happy_Monkey.jpg");
+            monkeyThreePictureBox.Image = Image.FromFile("Happy_Monkey.jpg");
+            monkeyFourPictureBox.Image = Image.FromFile("Happy_Monkey.jpg");
+            monkeyFivePictureBox.Image = Image.FromFile("Happy_Monkey.jpg");
         }
 
         /// <summary>
-        /// This method sets up a timer that changes the position of the
-        /// monkey as the timers ticks on.
+        /// The next 5 methods set up a timer that changes the position of the
+        /// monkeys as the timers ticks on.
         /// </summary>
         private void timer1_Tick(object sender, EventArgs e)
         {
             x = rand.Next(Width - 100);
             y = rand.Next(Height - 100);
-            monkeyPictureBox.Left = x;
-            monkeyPictureBox.Top = y;
+            monkeyOnePictureBox.Left = x;
+            monkeyOnePictureBox.Top = y;
+            Refresh();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            x = rand.Next(Width - 100);
+            y = rand.Next(Height - 100);
+            monkeyTwoPictureBox.Left = x;
+            monkeyTwoPictureBox.Top = y;
+            Refresh();
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            x = rand.Next(Width - 100);
+            y = rand.Next(Height - 100);
+            monkeyThreePictureBox.Left = x;
+            monkeyThreePictureBox.Top = y;
+            Refresh();
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            x = rand.Next(Width - 100);
+            y = rand.Next(Height - 100);
+            monkeyFourPictureBox.Left = x;
+            monkeyFourPictureBox.Top = y;
+            Refresh();
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            x = rand.Next(Width - 100);
+            y = rand.Next(Height - 100);
+            monkeyFivePictureBox.Left = x;
+            monkeyFivePictureBox.Top = y;
             Refresh();
         }
     }
